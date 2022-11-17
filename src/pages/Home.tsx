@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useState } from "react";
+import { StyleSheet, View, Keyboard, TouchableWithoutFeedback } from "react-native";
 
-import { Header } from '../components/Header';
-import { Task, TasksList } from '../components/TasksList';
-import { TodoInput } from '../components/TodoInput';
+import { Header } from "../components/Header";
+import { Task, TasksList } from "../components/TasksList";
+import { TodoInput } from "../components/TodoInput";
+import { TasksCounter } from "../components/TasksCounter";
+import { Message } from "../components/Message";
 
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const completes = tasks.filter((task) => {
+    return task.done !== false;
+  });
   // console.log(tasks.length);
 
   function handleAddTask(newTaskTitle: string) {
@@ -14,19 +19,18 @@ export function Home() {
     const newTask = {
       id: new Date().getTime(),
       title: newTaskTitle,
-      done: false
-    }
-    setTasks(oldTasks => [...oldTasks, newTask])
+      done: false,
+    };
+    setTasks((oldTasks) => [...oldTasks, newTask]);
   }
 
   function handleToggleTaskDone(id: number) {
     //TODO - toggle task done if exists
-    const updatedTasks = tasks.map(task => ({...task}))
+    const updatedTasks = tasks.map((task) => ({ ...task }));
     // const updateTasks = [...tasks];
 
-    const foundItem = updatedTasks.find(item => item.id === id);
-    if (!foundItem)
-    return;
+    const foundItem = updatedTasks.find((item) => item.id === id);
+    if (!foundItem) return;
 
     foundItem.done = !foundItem.done;
     setTasks(updatedTasks);
@@ -34,29 +38,40 @@ export function Home() {
 
   function handleRemoveTask(id: number) {
     //TODO - remove task from state
-    const updateTask = tasks.filter(task => task.id !== id);
+    const updateTask = tasks.filter((task) => task.id !== id);
 
     setTasks(updateTask);
   }
 
   return (
-    <View style={styles.container}>
-      <Header tasksCounter={tasks.length} />
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        <Header />
 
-      <TodoInput addTask={handleAddTask} />
+        <TodoInput addTask={handleAddTask} />
 
-      <TasksList 
-        tasks={tasks} 
-        toggleTaskDone={handleToggleTaskDone}
-        removeTask={handleRemoveTask} 
-      />
-    </View>
-  )
+        <TasksCounter
+          tasksCounter={tasks.length}
+          tasksConfirmed={completes.length}
+        />
+
+        {tasks.length !== 0 ? (
+          <TasksList
+            tasks={tasks}
+            toggleTaskDone={handleToggleTaskDone}
+            removeTask={handleRemoveTask}
+          />
+        ) : (
+          <Message />
+        )}
+      </View>
+    </TouchableWithoutFeedback>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EBEBEB'
-  }
-})
+    backgroundColor: "#272727",
+  },
+});

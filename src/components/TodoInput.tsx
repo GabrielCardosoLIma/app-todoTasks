@@ -22,10 +22,10 @@ export function TodoInput({ addTask }: TodoInputProps) {
     <View style={styles.inputContainer}>
       <TextInput
         style={styles.input}
-        placeholder="Adicionar novo todo..."
-        placeholderTextColor="#B2B2B2"
+        placeholder="Adicione uma nova tarefa"
+        placeholderTextColor="#808080"
         returnKeyType="send"
-        selectionColor="#666666"
+        selectionColor="#F2F2F2"
         //TODO - use value, onChangeText and onSubmitEditing props
         onChangeText={setTask}
         value={task}
@@ -38,7 +38,7 @@ export function TodoInput({ addTask }: TodoInputProps) {
         //TODO - onPress prop
         onPress={handleAddNewTask}
       >
-        <Feather name="chevron-right" size={24} color="#B2B2B2" />
+        <Feather name="plus-circle" size={22} color="#fff" />
       </TouchableOpacity>
     </View>
   );
@@ -46,7 +46,6 @@ export function TodoInput({ addTask }: TodoInputProps) {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    backgroundColor: "#FFF",
     borderRadius: 5,
     marginTop: -28,
     marginHorizontal: 24,
@@ -57,20 +56,27 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 56,
     paddingHorizontal: 20,
-    backgroundColor: "#FFF",
-    borderTopLeftRadius: 5,
-    borderBottomLeftRadius: 5,
-    borderRightWidth: 1,
-    borderRightColor: "#EBEBEB",
-    color: "#666666",
+    backgroundColor: "#262626",
+    borderColor: "#0D0D0D",
+    borderBottomLeftRadius: 6,
+    borderBottomRightRadius: 6,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
+    borderWidth: 1,
+    color: "#F2F2F2",
+    fontFamily: "Inter_400Regular",
   },
   addButton: {
-    backgroundColor: "#FFF",
-    height: 56,
+    backgroundColor: "#1E6F9F",
+    width: 52,
+    height: 52,
     paddingHorizontal: 12,
     justifyContent: "center",
     alignItems: "center",
-    borderTopRightRadius: 5,
+    borderBottomLeftRadius: 5,
     borderBottomRightRadius: 5,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    marginLeft: 6
   },
 });

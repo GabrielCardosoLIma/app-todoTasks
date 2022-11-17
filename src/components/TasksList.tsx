@@ -9,8 +9,6 @@ import {
   FlatListProps,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { ItemWrapper } from "./ItemWrapper";
-import trashIcon from "../assets/icons/trash/trash.png";
 // import Icon from 'react-native-vector-icons/Feather';
 
 export interface Task {
@@ -38,7 +36,7 @@ export function TasksList({
       showsVerticalScrollIndicator={false}
       renderItem={({ item, index }) => {
         return (
-          <ItemWrapper index={index}>
+          <View style={styles.container}>
             <View>
               <TouchableOpacity
                 testID={`button-${index}`}
@@ -69,9 +67,9 @@ export function TasksList({
               style={{ paddingHorizontal: 24 }}
               onPress={() => removeTask(item.id)}
             >
-              <Image source={trashIcon} />
+              <Image source={require("../assets/icons/trash/trash.png")} />
             </TouchableOpacity>
-          </ItemWrapper>
+          </View>
         );
       }}
       style={{
@@ -82,41 +80,53 @@ export function TasksList({
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginHorizontal: 24,
+    marginBottom: 8,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    backgroundColor: '#333333',
+    borderRadius: 8
+  },
   taskButton: {
     flex: 1,
     paddingHorizontal: 24,
     paddingVertical: 15,
     marginBottom: 4,
-    borderRadius: 4,
+    borderRadius: 99,
     flexDirection: "row",
     alignItems: "center",
   },
   taskMarker: {
-    height: 16,
-    width: 16,
-    borderRadius: 4,
+    height: 18,
+    width: 18,
+    borderRadius: 99,
     borderWidth: 1,
-    borderColor: "#B2B2B2",
+    borderColor: "#4EA8DE",
     marginRight: 15,
     alignItems: "center",
     justifyContent: "center",
   },
   taskText: {
-    color: "#666",
-    fontFamily: "Inter_500Medium",
+    color: "#F2F2F2",
+    fontFamily: "Inter_400Regular",
+    fontSize: 16
   },
   taskMarkerDone: {
-    height: 16,
-    width: 16,
-    borderRadius: 4,
-    backgroundColor: "#1DB863",
+    height: 18,
+    width: 18,
+    borderRadius: 99,
+    backgroundColor: "#5E60CE",
     marginRight: 15,
     alignItems: "center",
     justifyContent: "center",
   },
   taskTextDone: {
-    color: "#1DB863",
+    color: "#808080",
     textDecorationLine: "line-through",
-    fontFamily: "Inter_500Medium",
+    fontFamily: "Inter_400Regular",
+    fontSize: 16
   },
 });

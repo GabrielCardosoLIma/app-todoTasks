@@ -1,49 +1,27 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import logoImg from '../assets/images/logo/logo.png';
+import logoImg from '../assets/images/logo/todoimg.png';
 
-interface HeaderProps {
-  tasksCounter: number;
-}
-
-export function Header({ tasksCounter }: HeaderProps) {
-  const tasksCounterText = tasksCounter === 1 ? 'Tarefa' : 'Tarefas'
-  
+export function Header() {
   return (
     <View style={styles.container}>
-      <Image source={logoImg} />
-      
-      <View style={styles.tasks}>
-        <Text style={styles.tasksCounter}>Você tem </Text>
-        <Text style={styles.tasksCounterBold}>{tasksCounter} {tasksCounterText}</Text>
-      </View>
+      <Image source={logoImg} style={styles.logo} />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: getStatusBarHeight(true) + 16,
-    paddingHorizontal: 24,
-    paddingBottom: 60,
-    backgroundColor: '#8257E5',
-    justifyContent: 'space-between',
+    paddingTop: getStatusBarHeight(true) + 4,
+    width: '100%',
+    height: 173,
+    backgroundColor: '#0D0D0D',
+    justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row'
   },
-  tasks: {
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
-  tasksCounter: {
-    fontSize: 15,
-    color: '#FFF',
-    fontFamily: 'Inter_400Regular',
-  },
-  tasksCounterBold: {
-    fontSize: 15,
-    color: '#FFF',
-    fontFamily: 'Inter_700Bold',
+  logo: {
+    width: 130,
+    height: 36,
   }
 });
