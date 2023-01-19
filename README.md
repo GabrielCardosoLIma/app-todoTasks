@@ -67,10 +67,6 @@ $ npm i
 $ npx expo start
 
 #open device scannig QRCode
-
-or 
-
-#Android Emulator
 ````
 <br>
 
