@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src=".src/assets/images/logo/todoimg.png" alt="to.do" width="280px">
+  <img src="./src/assets/images/logo/todoimg.png" alt="to.do" width="280px">
 </h1>
 
 <p align="center">  
