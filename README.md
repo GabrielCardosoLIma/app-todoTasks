@@ -22,7 +22,7 @@
 
 <br>
 
-## 🚀Desafio Ignite #01 | To-Do   
+## 🚀Desafio Ignite | To-Do   
 Primeiro desafio de React Native do [Ignite](https://rocketseat.com.br/ignite).
 <br>
 
@@ -46,7 +46,7 @@ Desenvolvido com React Native e TypeScript.
 
 ## 🏁 Iniciando o projeto:
 
-Clone the project: `git clone https://github.com/GabrielCardosoLIma/app-todoTasks`
+Faça um clone do projeto: `git clone https://github.com/GabrielCardosoLIma/app-todoTasks`
 
 ❗ **NOTA:**  Pode ser feito com yarn também, vai de sua preferência.
 <br>
