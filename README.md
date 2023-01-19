@@ -38,11 +38,6 @@ Primeiro desafio de React Native do [Ignite](https://rocketseat.com.br/ignite).
 
 O 1º desafio foi completar um aplicativo de tarefas usando a lógica e os conceitos básicos do React Native. Ao final do desafio, testes seriam executados para verificar se o app era capaz de criar, concluir e deletar tarefas além de contá-las<br>
 <br>
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/53796370/127192133-e0bf0f06-e36a-488c-9138-d94b3d6d8d97.png" alt="Home" width="250">
-  <img src="https://user-images.githubusercontent.com/53796370/127192130-e4951e87-d2e6-4e38-93a9-17a6fd41c3a5.png" alt="Typing" width="250">
-  <img src="https://user-images.githubusercontent.com/53796370/127192134-555dc69a-4015-486c-b106-80deb3cdffec.png" alt="New task add" width="250">
-</div>
 
 <br>
 
