@@ -48,10 +48,6 @@ Desenvolvido com React Native e TypeScript.
 
 Faça um clone do projeto: `git clone https://github.com/GabrielCardosoLIma/app-todoTasks`
 
-❗ **NOTA:**  Pode ser feito com yarn também, vai de sua preferência.
-<br>
-<br>
-
 📱 Execute os seguintes comandos para executar o aplicativo::
 
 ````zsh
