@@ -34,7 +34,7 @@ Primeiro desafio de React Native do [Ignite](https://rocketseat.com.br/ignite).
 
 <br> 
 
-## ✅  The Project:
+## ✅  Projeto:
 
 O 1º desafio foi completar um aplicativo de tarefas usando a lógica e os conceitos básicos do React Native. Ao final do desafio, testes seriam executados para verificar se o app era capaz de criar, concluir e deletar tarefas além de contá-las<br>
 <br>
