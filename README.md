@@ -14,12 +14,6 @@
   <img alt="MIT License" src="https://img.shields.io/github/license/LiajuX/NextLevelWeek-Gameplay">
 </p>
 
-<p align="center">
-  ✅ <a href="#%EF%B8%8F-the-project">The Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  🛠 <a href="#-technologies">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  🏁 <a href="#-starting-the-project">Starting</a>
-</p>
-
 <br>
 
 ## 🚀Desafio Ignite | To-Do   
@@ -48,7 +42,7 @@ Desenvolvido com React Native e TypeScript.
 
 Faça um clone do projeto: `git clone https://github.com/GabrielCardosoLIma/app-todoTasks`
 
-📱 Execute os seguintes comandos para executar o aplicativo::
+📱 Execute os seguintes comandos para executar o aplicativo:
 
 ````zsh
 
