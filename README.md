@@ -14,10 +14,6 @@
   <img alt="MIT License" src="https://img.shields.io/github/license/LiajuX/NextLevelWeek-Gameplay">
 </p>
 
-<h3 align="center">
-  Index
-</h3>
-
 <p align="center">
   ✅ <a href="#%EF%B8%8F-the-project">The Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   🛠 <a href="#-technologies">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
