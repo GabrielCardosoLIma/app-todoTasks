@@ -12,7 +12,6 @@ export function Home() {
   const completes = tasks.filter((task) => {
     return task.done !== false;
   });
-  // console.log(tasks.length);
 
   function handleAddTask(newTaskTitle: string) {
     //TODO - add new task
